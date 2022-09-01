@@ -14,14 +14,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./resources/css/style.css">
 </head>
-<body>
+<body onload="calculate()">
     <h1>Hello World!</h1>
     <div class="row">
         <div class="column">
-            <form id="timesheet-entry" method="post" action="./resources/js/../../">
+            <form id="timesheet-entry" method="post" action="process.php">
                 <table id="timesheet">
                     <caption style="text-align: top;"><h2></h2></caption>
                     <thead>
+                        <tr>
+                            <th class="description" scope="col">Description</th>
+                            <th class="date" scope="col">Date</th>
+                            <th class="time" scope="col">Time (in minutes)</th>
+                            <th class="rate" scope="col">Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
                         <?php
                             while($row=pg_fetch_assoc($result)) {
                             echo "<tr>";
@@ -32,8 +40,6 @@
                             echo "</tr>";
                             }
                         ?>
-                    </thead>
-                    <tbody id="data">
                     </tbody>
                     <tbody id="insert">
                         <tr>
@@ -77,8 +83,12 @@
         <br>
         
         <div class="buttons">
-            <button id="submitBtn" type="submit">Insert Entry</button>
-            <button id="deleteBtn" type="button">Delete Entry</button>
+            <button id="submitBtn" type="submit" name="submit">Insert Entry</button>
+        </div>
+    </form>
+    <form action="delete.php">
+        <div class="buttons">
+        <button id="deleteBtn" type="submit" name="delete">Delete all</button>
         </div>
     </form>
 

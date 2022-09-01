@@ -1,9 +1,15 @@
 <?php
     include 'config.inc.php';
     $sql = "SELECT * FROM timesheet";
-    $result = pg_query($sql);
+    $res = pg_query($sql);
     $description = $_POST['description'];
-     $_POST['date'];
+    while($row=pg_fetch_assoc($res)) {
+        if ($description == $row['description']) {
+            alert("Can not have duplicate descriptions");
+            header("Location: ./index.php");
+        }
+    }
+    $date = $_POST['date'];
     $time = $_POST['time'];
     $rate = $_POST['rate'];
     $query = "INSERT INTO timesheet (description, date, time, rate) VALUES('$description', '$date', '$time', '$rate')";

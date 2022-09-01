@@ -1,4 +1,3 @@
-
 <?php
     $db_username = 'pmxqapwnobfthh';
     $db_password = 'a53b705d9bb660fdd28d9e0b8455d4389ce59345063298c14c4c57da05a398c0';

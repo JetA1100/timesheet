@@ -3,7 +3,7 @@
 <?php
 
     echo "AHHHH";
-    include 'config.inc.php0';
+    include 'config.inc.php';
     $description = pg_escape_string($_POST['description']);
     $date = pg_escape_string($_POST['date']);
     $time = pg_escape_string($_POST['time']);

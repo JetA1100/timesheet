@@ -7,4 +7,5 @@
     }
     echo "Data successfully deleted!";
     header("Location ./index.php");
+    exit;
 ?>

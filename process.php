@@ -11,4 +11,5 @@
     }
     echo "Data inserted Successfully!";
     header("Location: ./index.php");
+    exit;
 ?>

@@ -1,3 +1,9 @@
+<?php
+    include 'config.inc.php';
+    $sql = "SELECT * FROM timesheet";
+    $result = pg_query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +31,15 @@
                         </tr>
                     </thead>
                     <tbody id="data">
+                        <?php
+                            echo "<tr>
+                                <th class="select" scope="row"></th>
+                                <td><textarea class="description" name="description" rows="2" required></textarea></td>
+                                <td><input class="date" type="date"  name="date" required></td>
+                                <td><input class="time" type="number" name="time" min="0" required></td>
+                                <td><input class="rate" type="number" name="rate" min="0" required></td>
+                            </tr>"
+                        ?>
                     </tbody>
                     <tbody id="insert">
                         <tr>

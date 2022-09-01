@@ -6,7 +6,7 @@
     while($row=pg_fetch_assoc($result)) {
         if ($description == $row['description']) {
             alert("Can not have duplicate descriptions");
-            header("Location: ./index.php");
+            //header("Location: ./index.php");
         }
     }
     $date = $_POST['date'];

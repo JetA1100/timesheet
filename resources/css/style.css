@@ -7,14 +7,13 @@ h1 {
 }
 
 .column {
-    float: left;
-    width:50%;
-    padding-left: 5px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .row {
-    margin-left:-5px;
-    margin-right:-5px;
+    text-align: center;
 }
 
 table {
@@ -47,25 +46,19 @@ tbody {
     width: 400px;
 }
 
-.date {
+th:not(.description, .select), input:not(.select) {
     width: 100px;
 }
 
-.time {
+#total-time, #total-cost {
     width: 100px;
 }
-
-.rate {
-    width: 100px;
-}
-
-
 
 .buttons {
     text-align: center;
 }
 
 textarea {
-    resize: vertical;
+    /* resize: vertical; */
     display: flex;
 }

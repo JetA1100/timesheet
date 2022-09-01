@@ -1,5 +1,6 @@
 function calculate() {
     try {
+        alert('calculating');
         let data = document.getElementById('data');
         let insert = document.getElementById('insert');
         let insTime = insert.rows[0].cells[2].children[0].value;
@@ -19,3 +20,6 @@ function calculate() {
         alert(e);
     }
 }
+
+const inputTime = document.getElementById('timeinsert').querySelector('input');
+inputTime.addEventListener('input', calculate);

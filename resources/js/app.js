@@ -21,5 +21,6 @@ function calculate() {
     }
 }
 
-const inputTime = document.getElementById('timeinsert').querySelector('input');
-inputTime.addEventListener('input', calculate);
+$(function() {
+    $("#timeinsert").on("change keyup", calculate)
+})

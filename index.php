@@ -87,9 +87,7 @@
         
         <div class="buttons">
             <button id="submitBtn" type="submit" name="submit">Insert Entry</button>
-            <form method="get" action="delete.php">
-                <button id="deleteBtn" type="submit">Delete all</button>
-            </form>
+            <button id="deleteBtn" type="submit" name="delete">Delete all</button>
         </div>
     </form>
 

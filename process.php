@@ -10,5 +10,5 @@
         die('Invalid query:' . pg_last_error());
     }
     echo "Data inserted Successfully!";
-    
+    header("Location: ./index.php");
 ?>

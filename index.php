@@ -1,3 +1,9 @@
+<?php
+    include 'config.inc.php';
+    $sql = "SELECT * FROM timesheet";
+    $result = pg_query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +22,16 @@
                 <table id="timesheet">
                     <caption style="text-align: top;"><h2></h2></caption>
                     <thead>
-                        <tr>
-                            <th class="description" scope="col">Description</th>
-                            <th class="date" scope="col">Date</th>
-                            <th class="time" scope="col">Time (in minutes)</th>
-                            <th class="rate" scope="col">Rate</th>
-                        </tr>
+                        <?php
+                            while($row=pg_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo "<td><textarea class='description' name='description' rows='2' required readonly>" . $row['description'] . "</textarea></td>";
+                            echo "<td><input class='date' type='date'  name='date' required value='" . $row['date'] . "' readonly></td>";
+                            echo "<td><input class='time' type='number' name='time' min='0' required value='" . $row['time'] . "' readonly></td>";
+                            echo "<td><input class='rate' type='number' name='rate' min='0' required value='" . $row['rate'] . "' readonly></td>";
+                            echo "</tr>";
+                            }
+                        ?>
                     </thead>
                     <tbody id="data">
                     </tbody>

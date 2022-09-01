@@ -10,6 +10,7 @@ function insertRow() {
 
 function deleteRow() {
     try {
+        alert('deletion');
         let data = document.getElementById('data');
         for (let i = 0; i < data.rows.length; i++) {
             let row = data.rows[i];
@@ -69,7 +70,6 @@ $('#timesheet-entry').submit(function(e) {
 })
 
 $('#deleteBtn').click(function() {
-    alert("deletion");
     deleteRow();
     calculate();
 })

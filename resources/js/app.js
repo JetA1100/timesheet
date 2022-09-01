@@ -72,6 +72,5 @@ $('#timesheet-entry').submit(function(e) {
 
 $('#deleteBtn').click(function() {
     deleteRow();
-    handleSubmit();
     calculate();
 })

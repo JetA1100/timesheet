@@ -56,9 +56,10 @@ th:not(.description, .select), input:not(.select) {
 
 .buttons {
     text-align: center;
+    margin-bottom: 5px;
 }
 
 textarea {
-    /* resize: vertical; */
+    resize: vertical;
     display: flex;
 }

@@ -68,7 +68,7 @@ $('#timesheet-entry').submit(function(e) {
     handleSubmit();
     insertRow();
     calculate();
-    //e.preventDefault();
+    e.preventDefault();
 })
 
 $('#deleteBtn').click(function() {

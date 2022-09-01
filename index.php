@@ -23,7 +23,6 @@
                     <caption style="text-align: top;"><h2></h2></caption>
                     <thead>
                         <tr>
-                            <td></td>
                             <th class="description" scope="col">Description</th>
                             <th class="date" scope="col">Date</th>
                             <th class="time" scope="col">Time (in minutes)</th>
@@ -34,7 +33,6 @@
                         <?php
                             while($row=pg_fetch_assoc($result)) {
                             echo "<tr>";
-                            echo "<th class='select' scope='row'><input class='select' type='checkbox' onclick='fixGrammar()'></th>";
                             echo "<td><textarea class='description' name='description' rows='2' required readonly>" . $row['description'] . "</textarea></td>";
                             echo "<td><input class='date' type='date'  name='date' required value='" . $row['date'] . "' readonly></td>";
                             echo "<td><input class='time' type='number' name='time' min='0' required value='" . $row['time'] . "' readonly></td>";
@@ -45,7 +43,6 @@
                     </tbody>
                     <tbody id="insert">
                         <tr>
-                            <th class="select" scope="row"></th>
                             <td><textarea class="description" name="description" rows="2" required></textarea></td>
                             <td><input class="date" type="date"  name="date" required></td>
                             <td><input class="time" type="number" name="time" min="0" required></td>

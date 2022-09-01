@@ -20,6 +20,7 @@ Clicking on the "Delete All" button removes all previous data entries from the d
 - Visual Studio Code
 - HTML5
 - CSS3
+- JavaScript
 - PHP
 - Heroku
 - PostgreSQL

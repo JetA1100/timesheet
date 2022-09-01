@@ -1,6 +1,7 @@
 <?php
     include 'config.inc.php';
-    $description = pg_escape_string($_POST['description']);
+    echo $_POST['description'];
+    $description = $_POST['description'];
     $date = $_POST['date'];
     $time = $_POST['time'];
     $rate = $_POST['rate'];

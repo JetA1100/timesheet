@@ -69,7 +69,7 @@
         <br>
         
         <div class="buttons">
-            <button id="submitBtn" type="submit">Insert Entry</button>
+            <button id="submitBtn" type="submit" name="submit">Insert Entry</button>
             <button id="deleteBtn" type="button">Delete Entry</button>
         </div>
     </form>

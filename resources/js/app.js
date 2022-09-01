@@ -65,8 +65,7 @@ function clearInput() {
 }
 
 $('#timesheet-entry').submit(function(e) {
-    handleSubmit();
-    insertRow();
+    //insertRow();
     calculate();
     //e.preventDefault();
 })
@@ -76,8 +75,3 @@ $('#deleteBtn').click(function() {
     handleSubmit();
     calculate();
 })
-
-function handleSubmit() {
-    var formData = JSON.stringify($('#timesheet-entry').serializeArray());
-    alert(formData);
-}

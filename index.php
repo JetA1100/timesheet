@@ -12,6 +12,7 @@
     <h1>Hello World!</h1>
     <div class="row">
         <div class="column">
+            <iframe name="dummyframe" style="display: none;"></iframe>
             <form id="timesheet-entry" method="post" action="./process.php">
                 <table id="timesheet">
                     <caption style="text-align: top;"><h2></h2></caption>

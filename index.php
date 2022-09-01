@@ -87,8 +87,10 @@
         
         <div class="buttons">
             <button id="submitBtn" type="submit" name="submit">Insert Entry</button>
-            <button id="deleteBtn" type="submit" name="delete">Delete all</button>
         </div>
+    </form>
+    <form action="delete.php">
+        <button id="deleteBtn" type="submit" name="delete">Delete all</button>
     </form>
 
     <script type="text/javascript" src="./resources/js/app.js"></script>

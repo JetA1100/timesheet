@@ -65,12 +65,11 @@ function clearInput() {
 }
 
 $('#timesheet-entry').submit(function(e) {
-    //insertRow();
     calculate();
-    //e.preventDefault();
 })
 
 $('#deleteBtn').click(function() {
+    alert("deletion");
     deleteRow();
     calculate();
 })

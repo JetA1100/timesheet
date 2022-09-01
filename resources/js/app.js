@@ -1,8 +1,11 @@
 function calculate() {
     try {
         let data = document.getElementById('data');
-        let time = 0;
-        let cost = 0;
+        let insert = document.getElementById('insert');
+        let insTime = insert.rows[0].cells[2].children[0].value;
+        let insRate = insert.rows[0].cells[3].children[0].value;
+        let time = 0 + parseInt(insTime);
+        let cost = 0 + (parseInt(insTime) * parseInt(insRate));
         for (let i = 0; i < data.rows.length; i++) {
             let row = data.rows[i];
             let curTime = row.cells[2].children[0].value;
@@ -16,3 +19,7 @@ function calculate() {
         alert(e);
     }
 }
+
+$(function() {
+    $("#timeinsert").on("change keyup",calculate)
+})

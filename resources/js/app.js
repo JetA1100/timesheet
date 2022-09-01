@@ -19,7 +19,3 @@ function calculate() {
         alert(e);
     }
 }
-
-$(function() {
-    $("#timeinsert").on("change keyup",calculate)
-})

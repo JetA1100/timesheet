@@ -1,3 +1,4 @@
+// Calculation for total time and cost by iterating through data table
 function calculate() {
     try {
         let data = document.getElementById('data');

@@ -1,9 +1,11 @@
+<!-- Connect to PostgreSQL database -->
 <?php
     include 'config.inc.php';
     $sql = "SELECT * FROM timesheet";
     $result = pg_query($sql);
 ?>
 
+<!-- HTML framework -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +32,7 @@
                         </tr>
                     </thead>
                     <tbody id="data">
+                        <!-- Load in data from database -->
                         <?php
                             while($row=pg_fetch_assoc($result)) {
                             echo "<tr>";
@@ -81,12 +84,13 @@
         </div>
     </div>
         <br>
-        
+        <!-- Send to process.php for data insertion into database -->
         <div class="buttons">
             <button id="submitBtn" type="submit" name="submit">Insert Entry</button>
         </div>
     </form>
     <form action="delete.php">
+        <!-- Send to delete.php for data deletion -->
         <div class="buttons">
         <button id="deleteBtn" type="submit" name="delete">Delete all</button>
         </div>

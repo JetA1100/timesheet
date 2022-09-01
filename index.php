@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./resources/css/style.css">
 </head>
 <body onload="calculate()">
-    <h1>Hello World!</h1>
+    <h1>Zaw Aung's TimeSheet</h1>
     <div class="row">
         <div class="column">
             <form id="timesheet-entry" method="post" action="process.php">

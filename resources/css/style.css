@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #144E75;
+    background: -moz-linear-gradient(left, #144E75 0%, #207AB7 50%, #144E75 100%);
+    background: -webkit-linear-gradient(left, #144E75 0%, #207AB7 50%, #144E75 100%);
+    background: linear-gradient(to right, #144E75 0%, #207AB7 50%, #144E75 100%);
+}
+
 h1 {
     text-align: center;
 }

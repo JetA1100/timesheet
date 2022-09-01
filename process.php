@@ -1,7 +1,5 @@
 <?php
     include 'config.inc.php';
-    $sql = "SELECT * FROM timesheet";
-    $res = pg_query($sql);
     $description = $_POST['description'];
     $date = $_POST['date'];
     $time = $_POST['time'];
@@ -11,6 +9,7 @@
     if (! $result) {
         die('Invalid query:' . pg_last_error());
     }
+    echo "Data inserted successfully";
     header("Location: ./index.php");
     exit;
 ?>

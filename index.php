@@ -90,7 +90,9 @@
         </div>
     </form>
     <form action="delete.php">
+        <div class="buttons">
         <button id="deleteBtn" type="submit" name="delete">Delete all</button>
+        </div>
     </form>
 
     <script type="text/javascript" src="./resources/js/app.js"></script>

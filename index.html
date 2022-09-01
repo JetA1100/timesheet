@@ -28,7 +28,7 @@
                     </tbody>
                     <tbody id="insert">
                         <tr>
-                            <th scope="row"></th>
+                            <th class="select" scope="row"></th>
                             <td><textarea class="description" name="description" rows="2" required></textarea></td>
                             <td><input class="date" type="date"  name="date" required></td>
                             <td><input class="time" type="number" name="time" min="0" required></td>
@@ -38,32 +38,32 @@
                 </table>
         </div>
         <div class="column">
-            <table id="total-time">
-                <thead>
-                    <tr>
-                        <th class="time">Total Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>12345123</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="column">
-            <table id="total-cost">
-                <thead>
-                    <tr>
-                        <th class="rate">Total Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>123123</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="calculations">
+                <table id="total-time">
+                    <thead>
+                        <tr>
+                            <th>Total Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="time">0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="total-cost">
+                    <thead>
+                        <tr>
+                            <th>Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="cost">0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
         </div>
     </div>
         <br>

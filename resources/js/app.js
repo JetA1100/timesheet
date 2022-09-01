@@ -1,7 +1,7 @@
 function insertRow() {
-    var row = document.getElementById('insert').getElementsByTagName('tr');
-    var clone = row[row.length - 1].cloneNode(true);
-    var data = document.getElementById('data');
+    let row = document.getElementById('insert').getElementsByTagName('tr');
+    let clone = row[row.length - 1].cloneNode(true);
+    let data = document.getElementById('data');
     data.appendChild(clone);
     clearInput();
     setUpData();
@@ -10,10 +10,10 @@ function insertRow() {
 
 function deleteRow() {
     try {
-        var data = document.getElementById('data');
-        for (var i = 0; i < data.rows.length; i++) {
-            var row = data.rows[i];
-            var chkbox = row.cells[0].childNodes[0];
+        let data = document.getElementById('data');
+        for (let i = 0; i < data.rows.length; i++) {
+            let row = data.rows[i];
+            let chkbox = row.cells[0].childNodes[0];
             if (chkbox.checked) {
                 document.getElementById("timesheet").deleteRow(i+1);
                 i--;
@@ -27,9 +27,28 @@ function deleteRow() {
 function setUpData() {
     $('#data td input, #data td textarea').prop('readonly', true);
     $('#data th').each(function (i) {
-        var $td = $(this);
+        let $td = $(this);
         $td.html('<input class="select" type="checkbox" onclick="fixGrammar()">');
     });
+}
+
+function calculate() {
+    try {
+        let data = document.getElementById('data');
+        let time = 0;
+        let cost = 0;
+        for (let i = 0; i < data.rows.length; i++) {
+            let row = data.rows[i];
+            let curTime = row.cells[3].children[0].value;
+            let curRate = row.cells[4].children[0].value;
+            time += parseInt(curTime);
+            cost += (parseInt(curTime) * parseInt(curRate));
+        }
+        document.querySelector('#time').textContent = time;
+        document.querySelector('#cost').textContent = cost;
+    } catch(e) {
+        alert(e);
+    }
 }
 
 function fixGrammar() {
@@ -48,13 +67,10 @@ function clearInput() {
 $('#timesheet-entry').submit(function(e) {
     e.preventDefault();
     insertRow();
+    calculate();
 })
 
 $('#deleteBtn').click(function() {
     deleteRow();
+    calculate();
 })
-
-// $('.select').click(function() {
-//     var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
-//     window.alert(count);
-// })

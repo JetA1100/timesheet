@@ -35,10 +35,10 @@
                             while($row=pg_fetch_assoc($result)) {
                             echo "<tr>";
                             echo "<th class='select' scope='row'><input class='select' type='checkbox' onclick='fixGrammar()'></th>";
-                            echo "<td><textarea class='description' name='description' rows='2' required value='" . $row['description'] . "'></textarea></td>";
-                            echo "<td><input class='date' type='date'  name='date' required value='" . $row['date'] . "'></td>";
-                            echo "<td><input class='time' type='number' name='time' min='0' required value='" . $row['time'] . "'></td>";
-                            echo "<td><input class='rate' type='number' name='rate' min='0' required value='" . $row['rate'] . "'></td>";
+                            echo "<td><textarea class='description' name='description' rows='2' required readonly>" . $row['description'] . "</textarea></td>";
+                            echo "<td><input class='date' type='date'  name='date' required value='" . $row['date'] . "' readonly></td>";
+                            echo "<td><input class='time' type='number' name='time' min='0' required value='" . $row['time'] . "' readonly></td>";
+                            echo "<td><input class='rate' type='number' name='rate' min='0' required value='" . $row['rate'] . "' readonly></td>";
                             echo "</tr>";
                             }
                         ?>

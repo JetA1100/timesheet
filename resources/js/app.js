@@ -70,6 +70,13 @@ $('#timesheet-entry').submit(function(e) {
 })
 
 $('#deleteBtn').click(function() {
+    ajaxcall();
     deleteRow();
     calculate();
 })
+
+function ajaxcall() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../delete.php");
+    alert("it's doing something");
+}

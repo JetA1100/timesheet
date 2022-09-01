@@ -10,7 +10,6 @@ function insertRow() {
 
 function deleteRow() {
     try {
-        alert('deletion');
         let data = document.getElementById('data');
         for (let i = 0; i < data.rows.length; i++) {
             let row = data.rows[i];
@@ -74,9 +73,3 @@ $('#deleteBtn').click(function() {
     deleteRow();
     calculate();
 })
-
-function ajaxcall() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../delete.php");
-    alert("it's doing something");
-}

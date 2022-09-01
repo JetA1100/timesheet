@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 
     echo "AHHHH";
@@ -15,5 +13,3 @@
     }
     echo "Data inserted Successfully!";
 ?>
-</body>
-</html>
